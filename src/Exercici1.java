@@ -7,7 +7,7 @@ public class Exercici1 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Caudrats en horitzontal: ");
         int cuadratsHorizontal = scanner.nextInt();
-        System.out.println("Cuadrats en horitzontal: ");
+        System.out.println("Cuadrats en vertical: ");
         int cuadratsVertical = scanner.nextInt();
         System.out.println("Longitut costats");
         int cLenght = scanner.nextInt();
@@ -17,10 +17,6 @@ public class Exercici1 {
             reset(cuadratsHorizontal, cLenght);
             prepareNext(cLenght);
         }
-
-        // Show cursor
-        t.markCursor();
-
         // Show canvas
         t.show();
     }

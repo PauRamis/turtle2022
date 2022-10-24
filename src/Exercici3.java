@@ -8,7 +8,7 @@ public class Exercici3 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Caudrats en horitzontal: ");
         int cuadratsHorizontal = scanner.nextInt();
-        System.out.println("Cuadrats en horitzontal: ");
+        System.out.println("Cuadrats en vertical: ");
         int cuadratsVertical = scanner.nextInt();
 
         for (int i = 0; i < cuadratsVertical; i++) {
