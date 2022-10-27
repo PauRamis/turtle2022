@@ -14,7 +14,8 @@ public class Exercici4 {
         pujada(lFulla, numFulles);
         punta(lFulla);
         baixada(lFulla, numFulles);
-        //t.forward(lFulla/2);
+        t.turnRight(45);
+        t.forward(lFulla/2);
 
 
         //t.markCursor();
@@ -23,25 +24,35 @@ public class Exercici4 {
 
     private static void pujada(int lFulla, int numFulles) {
         for (int i = 0; i < numFulles; i++) {
-            fulla(lFulla);
+            fullapuj(lFulla);
             t.turnLeft(45);
         }
     }
 
     private static void punta(int lFulla) {
         t.turnRight(45);
-        t.forward(lFulla/4);
+        t.forward(lFulla/2);
         t.turnRight(90);
-        t.forward(lFulla/3);
+        t.forward(lFulla/2);
     }
 
     private static void baixada(int lFulla, int numFulles) {
+        for (int i = 0; i < numFulles; i++) {
+            fullabaix(lFulla);
+            t.turnLeft(45);
+        }
     }
 
-    private static void fulla(int lFulla) {
+    private static void fullapuj(int lFulla) {
         t.turnLeft(90);
         t.forward(lFulla);
         t.turnRight(135);
         t.forward((int) Math.hypot(lFulla, lFulla));
+    }
+    private static void fullabaix(int lFulla) {
+        t.forward((int) Math.hypot(lFulla, lFulla));
+        t.turnRight(135);
+        t.forward(lFulla);
+        t.turnLeft(90);
     }
 }
