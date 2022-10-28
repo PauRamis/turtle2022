@@ -18,15 +18,15 @@ public class Exercici6 {
 
     private static void espiral(int nVoltes, int nCostats) {
         //cada volta es podria dir que son 8 costats
-        int rep = nVoltes * 2;
         int curva = 360/nCostats;
         int longitut = 10;
+        int rep = nVoltes * 2;
+        int half = nCostats / 2;
 
-        //Cada 4 costats, s'augmenta la longitut
-        //AMB MENYS DE 6 COSTATS ES VEU MALAMENT; ARREGLAR
+        //S'augmenta la longitut a la mitat del poligon
         for (int j = 0; j < rep; j++) {
             longitut = longitut + 20;
-            for (int i = 0; i < 4; i++) {
+            for (int i = 0; i < half; i++) {
                 t.forward(longitut);
                 t.turnRight(curva);
             }
