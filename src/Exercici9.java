@@ -10,18 +10,23 @@ public class Exercici9 {
         System.out.println("Número de triangles");
         int ntriangles = scanner.nextInt();
 
+        //Calculs trigonometrics
         int angleCentre = 360 / ntriangles;
         int hipotenusa = (int) ((lCostat/2) / (Math.sin(angleCentre/2)));
-        int anglesCostat = ((180- angleCentre) / 2);
+        int anglesCostat = ((180 - angleCentre) / 2);
 
-        for (int i = 0; i < ntriangles; i++) {
-            triangle(lCostat, hipotenusa, anglesCostat);
-            t.turnLeft(angleCentre);
-        }
+        //Bucle de triangles
+        //for (int i = 0; i < ntriangles; i++) {
+            triangle(lCostat, hipotenusa, anglesCostat, angleCentre);
+            //t.turnLeft(angleCentre);
+        //}
+
+        //Mostra
+        t.markCursor();
         t.show();
     }
 
-    private static void triangle(int lCostat, int hipotenusa, int anglesCostat) {
+    private static void triangle(int lCostat, int hipotenusa, int anglesCostat, int angleCentre) {
         t.forward(hipotenusa);
         t.turnRight(anglesCostat);
 
@@ -29,6 +34,5 @@ public class Exercici9 {
         t.turnRight(anglesCostat);
 
         t.forward(hipotenusa);
-        t.turnRight(120);
     }
 }
