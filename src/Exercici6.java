@@ -22,13 +22,14 @@ public class Exercici6 {
         int curva = 360/nCostats;
         int longitut = 10;
 
+        //Cada 4 costats, s'augmenta la longitut
+        //AMB MENYS DE 6 COSTATS ES VEU MALAMENT; ARREGLAR
         for (int j = 0; j < rep; j++) {
-            longitut=+ 10;
+            longitut = longitut + 20;
             for (int i = 0; i < 4; i++) {
                 t.forward(longitut);
                 t.turnRight(curva);
             }
         }
-
     }
 }
