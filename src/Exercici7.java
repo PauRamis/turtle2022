@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
-public class Exercici7 {    static Turtle t = new Turtle(500,500);
+public class Exercici7 {
+    static Turtle t = new Turtle(500,500);
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -11,7 +12,6 @@ public class Exercici7 {    static Turtle t = new Turtle(500,500);
             fulla();
             girar(nFulles);
         }
-        t.markCursor();
         t.show();
     }
 
