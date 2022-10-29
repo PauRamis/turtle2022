@@ -16,13 +16,10 @@ public class Exercici9 {
         double hipotenusa = (lCostat / 2.0) / Math.cos((anglesCostat * Math.PI) / 180);
 
         //Bucle de triangles
-        //for (int i = 0; i < ntriangles; i++) {
-        triangle(lCostat, hipotenusa, anglesCostat);
-        //t.turnLeft(angleCentre);
-        //}
-
-        //Mostra
-        t.markCursor();
+        for (int i = 0; i < ntriangles; i++) {
+            triangle(lCostat, hipotenusa, anglesCostat);
+            t.turnLeft(180);
+        }
         t.show();
     }
 
@@ -33,6 +30,4 @@ public class Exercici9 {
         t.turnLeft(180 - (int) anglesCostat);
         t.forward((int) hipotenusa);
     }
-
-
 }
