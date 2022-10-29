@@ -11,14 +11,14 @@ public class Exercici9 {
         int ntriangles = scanner.nextInt();
 
         //Calculs trigonometrics
-        int angleCentre = 360 / ntriangles;
-        int hipotenusa = (int) ((lCostat/2) / (Math.sin(angleCentre/2)));
-        int anglesCostat = ((180 - angleCentre) / 2);
+        double angleCentre = 360.0 / ntriangles;
+        double anglesCostat = (180.0 - angleCentre) / 2.0;
+        double hipotenusa = (lCostat / 2.0) / Math.cos((anglesCostat * Math.PI) / 180);
 
         //Bucle de triangles
         //for (int i = 0; i < ntriangles; i++) {
-            triangle(lCostat, hipotenusa, anglesCostat, angleCentre);
-            //t.turnLeft(angleCentre);
+        triangle(lCostat, hipotenusa, anglesCostat);
+        //t.turnLeft(angleCentre);
         //}
 
         //Mostra
@@ -26,13 +26,13 @@ public class Exercici9 {
         t.show();
     }
 
-    private static void triangle(int lCostat, int hipotenusa, int anglesCostat, int angleCentre) {
-        t.forward(hipotenusa);
-        t.turnRight(anglesCostat);
-
+    private static void triangle(int lCostat, double hipotenusa, double anglesCostat) {
+        t.forward((int) hipotenusa);
+        t.turnLeft(180 - (int) anglesCostat);
         t.forward(lCostat);
-        t.turnRight(anglesCostat);
-
-        t.forward(hipotenusa);
+        t.turnLeft(180 - (int) anglesCostat);
+        t.forward((int) hipotenusa);
     }
+
+
 }
